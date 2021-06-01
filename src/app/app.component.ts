@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AwwService, Aww } from './aww.service';
+import { AwwService, Children } from './aww.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,12 @@ import { AwwService, Aww } from './aww.service';
 })
 export class AppComponent implements OnInit {
   title = 'Api Reddit Lab';
-  post: any;
-  posts: Aww[] = [];
-  awwData = null;
+  post: Children[] = [];
   constructor(public aww: AwwService){}
 
   ngOnInit(): void {
     this.aww.getPosts().subscribe((data)=>{
-      this.post = data;
+      this.post = data.data.children;
       console.log(data);
       console.log(data.kind);
       console.log(data.data);

@@ -5,8 +5,34 @@
 
 h2 { 
     padding: 10px;
+    margin-left: 50px;
 }
 
 .container {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.posts-list {
+    list-style-type: none;
+    border: 1px solid darkgray;
+    padding-left: 20px;
+}
+
+li {
+    padding: 10px;
+    line-height: 20px;
+    width: 300px;
+}
+
+span.title {
+    font-size: 18px;
+    font-weight: 600px;
+}
+
+a {
+    text-decoration: none;
+    color: #5f5e5e;
 }

@@ -1,8 +1,10 @@
-  <h2>{{title}}</h2>
+<h2>{{title}}</h2>
   <div class="container"> 
-    <ul class="posts-list" *ngFor="let post of awwData; let i = index">
-    <li>
-    <p>Title: {{post.data.data.children[i].data.title}}</p>
-    </li>
+    <ul class="posts-list" *ngFor="let child of post; let i = index">
+      <li>
+        <p class="title"><strong>Title:</strong> <span class="post-title"> {{child.data.title}}</span></p>
+        <p class="post-img"><img src="{{child.data.thumbnail}}"></p>
+        <p class="post-link"><a href="https://www.reddit.com/{{child.data.permalink}}">View full post on Reddit</a></p>
+      </li>
     </ul>
   </div>

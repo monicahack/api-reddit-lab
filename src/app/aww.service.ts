@@ -5,10 +5,10 @@ export interface Aww {
   kind:string;
   data:Data;
 }
-interface Data {
+export interface Data {
   children:Children[];
 }
-interface Children {
+export interface Children {
   data:Cdata;
 }
 
