@@ -8,13 +8,14 @@ import { AwwService, Aww } from './aww.service';
 })
 export class AppComponent implements OnInit {
   title = 'Api Reddit Lab';
-
+  post: any;
   posts: Aww[] = [];
   awwData = null;
   constructor(public aww: AwwService){}
 
   ngOnInit(): void {
-    this.aww.getPosts().subscribe((data:Aww)=>{
+    this.aww.getPosts().subscribe((data)=>{
+      this.post = data;
       console.log(data);
       console.log(data.kind);
       console.log(data.data);
